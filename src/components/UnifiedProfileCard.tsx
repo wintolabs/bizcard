@@ -1,21 +1,19 @@
-// src/components/UnifiedProfileCard.tsx - Enhanced with better icons & animations
+// src/components/UnifiedProfileCard.tsx - Production Ready
 
 import type { User } from "@/lib/db";
-import { Download, MapPin } from "lucide-react";
-import { FiPhone, FiMail, FiLinkedin } from "react-icons/fi"; // Feather icons (clean & modern)
-import { BsWhatsapp } from "react-icons/bs"; // Bootstrap icons
-import { RiVerifiedBadgeFill } from "react-icons/ri"; // Remix icons
+import { MapPin } from "lucide-react";
 import Image from "next/image";
+import { BsWhatsapp } from "react-icons/bs";
+import { FiLinkedin, FiMail, FiPhone } from "react-icons/fi";
+import { RiVerifiedBadgeFill } from "react-icons/ri";
+import ContactSaveButton from "./ContactSaveButton";
 
-type Props = {
+interface Props {
   user: User;
   onPrimaryHref?: string;
-};
+}
 
-export default function UnifiedProfileCard({
-  user,
-  onPrimaryHref = "#",
-}: Props) {
+export default function UnifiedProfileCard({ user }: Props) {
   return (
     <div className="rounded-t-[2rem] bg-white/95 backdrop-blur-xl shadow-[0_-20px_80px_rgba(0,0,0,0.15)] border-t border-white/50 ring-1 ring-black/5 relative overflow-hidden">
       {/* Enhanced Drag Handle with subtle glow */}
@@ -94,8 +92,8 @@ export default function UnifiedProfileCard({
 
         {/* Enhanced Primary Action Button */}
         <div className="mt-8">
-          <a
-            href={onPrimaryHref}
+          <ContactSaveButton
+            user={user}
             style={{
               background: `linear-gradient(135deg, ${
                 user.accentHex || "#C73E3A"
@@ -103,16 +101,7 @@ export default function UnifiedProfileCard({
               boxShadow: `0 20px 50px ${user.accentHex || "#C73E3A"}30`,
             }}
             className="group w-full rounded-3xl px-8 h-16 flex items-center justify-center text-lg font-black text-white outline-none ring-offset-2 focus:ring-4 active:scale-[0.96] transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1 hover:scale-[1.02] relative overflow-hidden"
-          >
-            {/* Enhanced shimmer effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-
-            <Download className="h-6 w-6 mr-3 relative z-10 group-hover:scale-110 group-hover:animate-bounce transition-all duration-300" />
-            <span className="relative z-10 tracking-wide">Save contact</span>
-
-            {/* Pulsing background glow */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </a>
+          />
         </div>
 
         {/* Enhanced Contact Methods Grid */}
