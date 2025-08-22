@@ -10,6 +10,7 @@ export type User = {
   companyLogo?: string;
   location?: string;
   phone?: string;
+  mobile?: string;
   whatsapp?: string;
   email?: string;
   website?: string;
@@ -32,6 +33,7 @@ const DEMO: Record<string, User> = {
     companyLogo: "/logo-md.svg",
     location: "Noida, Uttar Pradesh, India",
     phone: "01206679500",
+    mobile: "919935438980",
     whatsapp: "919935438980",
     email: "amit.dube@motherson.com",
     website: "https://motherson.com",
