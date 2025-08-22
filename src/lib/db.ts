@@ -1,5 +1,3 @@
-// src/lib/db.ts - Clean professional business card version
-
 export type User = {
   id: string;
   handle: string;
@@ -19,7 +17,7 @@ export type User = {
   accentHex?: string;
   bio?: string;
   exchangeFormUrl?: string;
-  officeAddress?: string; // Keep this as it's relevant for business
+  officeAddress?: string;
 };
 
 const DEMO: Record<string, User> = {

@@ -14,30 +14,53 @@ export async function GET(
     return new NextResponse("User not found", { status: 404 });
   }
 
-  // Generate vCard with multiple phone numbers
-  let vCard = `BEGIN:VCARD
-               VERSION:3.0
-               FN:${user.name}
-               N:${user.name.split(" ").reverse().join(";")}
-               ORG:${user.company || ""}
-               TITLE:${user.title || ""}`;
+  // Build vCard fields array to avoid empty lines
+  const vCardFields = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    `FN:${user.name}`,
+    `N:${user.name.split(" ").reverse().join(";")}`,
+  ];
 
-  // Add work phone if exists
+  // Add optional fields only if they exist
+  if (user.company) {
+    vCardFields.push(`ORG:${user.company}`);
+  }
+
+  if (user.title) {
+    vCardFields.push(`TITLE:${user.title}`);
+  }
+
+  // Add phone numbers with proper formatting
   if (user.phone) {
-    vCard += `\nTEL;TYPE=WORK,VOICE:${user.phone}`;
+    vCardFields.push(`TEL;TYPE=WORK,VOICE:${user.phone}`);
   }
 
-  // Add mobile phone if exists
   if (user.mobile) {
-    vCard += `\nTEL;TYPE=CELL,VOICE:${user.mobile}`;
+    vCardFields.push(`TEL;TYPE=CELL,VOICE:${user.mobile}`);
   }
 
-  vCard += `
-            EMAIL;TYPE=WORK:${user.email || ""}
-            URL:${user.website || ""}
-            ADR;TYPE=WORK:;;${user.officeAddress || ""};;;;
-            NOTE:${user.bio || ""}
-            END:VCARD`;
+  // Add other contact fields
+  if (user.email) {
+    vCardFields.push(`EMAIL;TYPE=WORK:${user.email}`);
+  }
+
+  if (user.website) {
+    vCardFields.push(`URL:${user.website}`);
+  }
+
+  if (user.officeAddress) {
+    vCardFields.push(`ADR;TYPE=WORK:;;${user.officeAddress};;;;`);
+  }
+
+  if (user.bio) {
+    vCardFields.push(`NOTE:${user.bio}`);
+  }
+
+  vCardFields.push("END:VCARD");
+
+  // Join with proper line endings
+  const vCard = vCardFields.join("\r\n");
 
   return new NextResponse(vCard, {
     headers: {
@@ -47,6 +70,8 @@ export async function GET(
         "_"
       )}.vcf"`,
       "Cache-Control": "no-cache, no-store, must-revalidate",
+      Pragma: "no-cache",
+      Expires: "0",
     },
   });
 }
