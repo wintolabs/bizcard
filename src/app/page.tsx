@@ -1,4 +1,7 @@
-// src/app/page.tsx
+// src/app/page.tsx - FIXED VERSION
+
+import Link from "next/link"; // ✅ Next.js Link for navigation
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50">
@@ -20,9 +23,12 @@ export default function Home() {
             </li>
             <li>
               Example:{" "}
-              <a className="underline" href="/amitdube">
-                /amitdube
-              </a>
+              <Link
+                href="/amitdube"
+                className="text-blue-600 hover:text-blue-800 underline font-medium"
+              >
+                View Profile
+              </Link>
             </li>
           </ul>
           <div className="mt-6 text-sm text-zinc-500">
