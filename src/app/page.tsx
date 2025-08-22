@@ -1,6 +1,6 @@
-// src/app/page.tsx - FIXED VERSION
+// src/app/page.tsx
 
-import Link from "next/link"; // ✅ Next.js Link for navigation
+import Link from "next/link";
 
 export default function Home() {
   return (
