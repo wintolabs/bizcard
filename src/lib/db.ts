@@ -46,7 +46,7 @@ const DEMO: Record<string, User> = {
     id: "u_rahul",
     handle: "rahul",
     name: "Rahul Sharma",
-    title: "Business Development",
+    title: "Business Development - INDIA Region",
     department: "Smart Cities",
     company: "NXP Semiconductors",
     companyLogo: "/nxp-logo.svg",
