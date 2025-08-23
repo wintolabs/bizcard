@@ -67,6 +67,20 @@ export default function UnifiedProfileCard({ user }: Props) {
           )}
         </div>
 
+        {/* Enhanced Primary Action Button */}
+        <div className="mt-8">
+          <ContactSaveButton
+            user={user}
+            style={{
+              background: `linear-gradient(135deg, ${
+                user.accentHex || "#C73E3A"
+              } 0%, ${user.accentHex || "#C73E3A"}dd 100%)`,
+              boxShadow: `0 20px 50px ${user.accentHex || "#C73E3A"}30`,
+            }}
+            className="group w-full rounded-3xl px-8 h-16 flex items-center justify-center text-lg font-black text-white outline-none ring-offset-2 focus:ring-4 active:scale-[0.96] transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1 hover:scale-[1.02] relative overflow-hidden"
+          />
+        </div>
+
         {/* Location */}
         <div className="mt-6">
           {(user.location || user.officeAddress) && (
@@ -88,20 +102,6 @@ export default function UnifiedProfileCard({ user }: Props) {
               </div>
             </div>
           )}
-        </div>
-
-        {/* Enhanced Primary Action Button */}
-        <div className="mt-8">
-          <ContactSaveButton
-            user={user}
-            style={{
-              background: `linear-gradient(135deg, ${
-                user.accentHex || "#C73E3A"
-              } 0%, ${user.accentHex || "#C73E3A"}dd 100%)`,
-              boxShadow: `0 20px 50px ${user.accentHex || "#C73E3A"}30`,
-            }}
-            className="group w-full rounded-3xl px-8 h-16 flex items-center justify-center text-lg font-black text-white outline-none ring-offset-2 focus:ring-4 active:scale-[0.96] transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1 hover:scale-[1.02] relative overflow-hidden"
-          />
         </div>
 
         {/* Enhanced Contact Methods Grid */}
