@@ -42,6 +42,26 @@ const DEMO: Record<string, User> = {
     officeAddress:
       "Plot No. 1, Sector-127, Noida-Greater Noida Expressway, Noida-201301 U.P.",
   },
+  rahul: {
+    id: "u_rahul",
+    handle: "rahul",
+    name: "Rahul Sharma",
+    title: "Business Development",
+    department: "Smart Cities",
+    company: "NXP Semiconductors",
+    companyLogo: "/nxp-logo.svg",
+    location: "Noida, Uttar Pradesh, India",
+    mobile: "919871997099",
+    whatsapp: "919871997099",
+    email: "rahul.sharma_7@nxp.com",
+    website: "https://www.nxp.com",
+    linkedIn: "https://www.linkedin.com/in/rahul-sharma-494404162",
+    avatarUrl: "/rahul.png",
+    accentHex: "#C73E3A",
+
+    officeAddress:
+      "Plot 2 & 3, Sector-16A, Noida-Greater Noida Expressway, Noida-201301 U.P.",
+  },
 };
 
 export async function getUserByHandle(handle: string) {

@@ -106,9 +106,9 @@ export default function UnifiedProfileCard({ user }: Props) {
 
         {/* Enhanced Contact Methods Grid */}
         <div className="grid grid-cols-2 gap-4 mt-8">
-          {user.phone && (
+          {user.mobile && (
             <a
-              href={`tel:${user.phone}`}
+              href={`tel:${user.mobile}`}
               className="group relative overflow-hidden inline-flex h-16 items-center justify-center gap-3 rounded-2xl border-2 border-blue-200/50 bg-gradient-to-br from-blue-50/50 to-white px-4 text-sm font-bold text-blue-700 shadow-lg transition-all duration-300 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-2 hover:scale-105 active:scale-95"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-100/0 to-blue-100/60 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
