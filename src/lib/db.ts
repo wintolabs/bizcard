@@ -82,6 +82,26 @@ const DEMO: Record<string, User> = {
     officeAddress:
       "61-A, 2 North Avenue, Maker Maxity, Bandra Kurla Complex, Mumbai, Maharashtra, 400051",
   },
+  aldo: {
+    id: "u_aldo",
+    handle: "aldo",
+    name: "Aldo Peguero",
+    title: "Co Founder",
+    // department: "Products and Solutions",
+    company: "Lorso Technologies",
+    companyLogo: "/lorso-technologies-logo.png",
+    location: "Mexico",
+    mobile: "525540424593",
+    whatsapp: "525540424593",
+    email: "aldo@lorso.mx",
+    website: "https://www.lorso.mx",
+    linkedIn: "https://www.linkedin.com/in/aldopeguero",
+    avatarUrl: "/aldo.png",
+    accentHex: "#C73E3A",
+
+    officeAddress:
+      "Adolfo Prieto 1474, Col. Del Valle, Benito Juárez, C.P.03100 CDMX, México",
+  },
 };
 
 export async function getUserByHandle(handle: string) {
