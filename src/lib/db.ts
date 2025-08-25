@@ -62,6 +62,26 @@ const DEMO: Record<string, User> = {
     officeAddress:
       "Plot 2 & 3, Sector-16A, Noida-Greater Noida Expressway, Noida-201301 U.P.",
   },
+  sushil: {
+    id: "u_sushil",
+    handle: "sushil",
+    name: "Sushil S Jadhav",
+    title: "Vice President",
+    department: "Products and Solutions",
+    company: "Mastercard",
+    companyLogo: "/mastercard-logo.svg",
+    location: "Mumbai, Maharashtra, India",
+    mobile: "919920123466",
+    whatsapp: "919920123466",
+    email: "sushil.jadhav@mastercard.com",
+    website: "https://www.mastercard.com",
+    linkedIn: "https://www.linkedin.com/in/sushil-s-jadhav-3a981714",
+    avatarUrl: "/sushil-jadhav.jpeg",
+    accentHex: "#C73E3A",
+
+    officeAddress:
+      "61-A, 2 North Avenue, Maker Maxity, Bandra Kurla Complex, Mumbai, Maharashtra, 400051",
+  },
 };
 
 export async function getUserByHandle(handle: string) {
