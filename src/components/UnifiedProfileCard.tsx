@@ -3,7 +3,7 @@
 import type { User } from "@/lib/db";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
-import { BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp, BsInstagram } from "react-icons/bs";
 import { FiLinkedin, FiMail, FiPhone } from "react-icons/fi";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import ContactSaveButton from "./ContactSaveButton";
@@ -153,7 +153,8 @@ export default function UnifiedProfileCard({ user }: Props) {
             </a>
           )}
 
-          {user.linkedIn && (
+          {/* Conditional LinkedIn or Instagram */}
+          {user.linkedIn ? (
             <a
               href={user.linkedIn}
               target="_blank"
@@ -168,7 +169,22 @@ export default function UnifiedProfileCard({ user }: Props) {
                 LinkedIn
               </span>
             </a>
-          )}
+          ) : user.instagram ? (
+            <a
+              href={`https://instagram.com/${user.instagram}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden inline-flex h-16 items-center justify-center gap-3 rounded-2xl border-2 border-pink-200/50 bg-gradient-to-br from-pink-50/50 to-white px-4 text-sm font-bold text-pink-700 shadow-lg transition-all duration-300 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-500/20 hover:-translate-y-2 hover:scale-105 active:scale-95"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-100/0 to-pink-100/60 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+              <div className="relative z-10 p-2 rounded-full bg-pink-100/50 group-hover:bg-pink-200/80 transition-colors duration-300">
+                <BsInstagram className="h-5 w-5 text-pink-600 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300" />
+              </div>
+              <span className="relative z-10 group-hover:text-pink-800 transition-colors duration-300">
+                Instagram
+              </span>
+            </a>
+          ) : null}
         </div>
 
         {/* Bio Section */}

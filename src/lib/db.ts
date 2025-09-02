@@ -13,6 +13,7 @@ export type User = {
   email?: string;
   website?: string;
   linkedIn?: string;
+  instagram?: string;
   avatarUrl?: string;
   accentHex?: string;
   bio?: string;
@@ -101,6 +102,28 @@ const DEMO: Record<string, User> = {
 
     officeAddress:
       "Adolfo Prieto 1474, Col. Del Valle, Benito Juárez, C.P.03100 CDMX, México",
+  },
+
+  vireshgola: {
+    id: "u_vireshgola",
+    handle: "vireshgola",
+    name: "Viresh Gola",
+    title: "Director",
+    department: "Print & Signage",
+    company: "Shubham Graphics",
+    companyLogo: "/shubham-graphics-logo.jpeg",
+    location: "New Delhi, India",
+    phone: "",
+    mobile: "919810618040",
+    whatsapp: "919810618040",
+    email: "shubhamgraphics@gmail.com",
+    website: "",
+    linkedIn: "",
+    avatarUrl: "/viresh-gola.png",
+    accentHex: "#C73E3A",
+    bio: "Director at Shubham Graphics - one of the leading Signage & Printing units in Delhi with over 2 decades of experience. We specialize in executing complex print and signage projects including Brochures, Posters, LED Signages, NFC Cards, Canvas and comprehensive printing solutions with excellent quality and timely delivery.",
+    officeAddress: "3, Ansari Market, Daryaganj, New Delhi -110002",
+    instagram: "sgc.shubhamgraphics",
   },
 };
 
