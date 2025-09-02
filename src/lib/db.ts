@@ -57,7 +57,7 @@ const DEMO: Record<string, User> = {
     email: "rahul.sharma_7@nxp.com",
     website: "https://www.nxp.com",
     linkedIn: "https://www.linkedin.com/in/rahul-sharma-494404162",
-    avatarUrl: "/rahul-1.jpeg",
+    avatarUrl: "/rahul.jpeg",
     accentHex: "#C73E3A",
 
     officeAddress:
