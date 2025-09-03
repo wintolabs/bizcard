@@ -129,7 +129,7 @@ const DEMO: Record<string, User> = {
   tirthankar: {
     id: "u_tirthankar",
     handle: "tirthankar",
-    name: "Tirthankar Kshetrimayum",
+    name: "Tirthankar K",
     title:
       "Technical Marketing Lead RFID/AIDC - South Asia, Sub Saharan Africa & Middle East",
     department: "RFID/AIDC",
