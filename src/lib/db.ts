@@ -144,7 +144,7 @@ const DEMO: Record<string, User> = {
     linkedIn: "https://www.linkedin.com/in/tirthankar-kshetrimayum-aa368616",
     avatarUrl: "/tirthankar.jpeg",
     accentHex: "#C73E3A",
-    bio: "RFID professional with over 20 years experience in Business Development, sales, consulting and Market Development. Leading RFID Intelligent Labels division for South Asia & Sub Saharan Africa at Avery Dennison, enabling brands with digital transformation solutions.",
+    bio: "RFID professional with over 20 years experience in Business Development, Sales, Consulting and Market Development. Leading RFID Intelligent Labels division for South Asia, Sub Saharan Africa & Middle East at Avery Dennison, enabling brands with digital transformation solutions.",
     officeAddress:
       "Plot No. 18/23, Peenya Industrial Area, Phase-1, Bengaluru, Karnataka - 560058",
     instagram: "tari031982",
