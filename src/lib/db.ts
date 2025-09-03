@@ -122,7 +122,7 @@ const DEMO: Record<string, User> = {
     avatarUrl: "/viresh-gola.png",
     accentHex: "#C73E3A",
     bio: "Director at Shubham Graphics - one of the leading Signage & Printing units in Delhi with over 2 decades of experience. We specialize in executing complex print and signage projects including Brochures, Posters, LED Signages, NFC Cards, Canvas and comprehensive printing solutions with excellent quality and timely delivery.",
-    officeAddress: "3, Ansari Market, Daryaganj, New Delhi -110002",
+    officeAddress: "3, Ansari Market, Daryaganj, New Delhi - 110002",
     instagram: "sgc.shubhamgraphics",
   },
 
@@ -130,11 +130,12 @@ const DEMO: Record<string, User> = {
     id: "u_tirthankar",
     handle: "tirthankar",
     name: "Tirthankar Kshetrimayum",
-    title: "Technical Marketing Lead RFID - South Asia & Middle East",
-    department: "RFID",
+    title:
+      "Technical Marketing Lead RFID/AIDC - South Asia, Sub Saharan Africa & Middle East",
+    department: "RFID/AIDC",
     company: "Avery Dennison",
     companyLogo: "/avery-dennison.svg",
-    location: "India",
+    location: "Bengaluru, Karnataka, India",
     phone: "",
     mobile: "917892153358",
     whatsapp: "917892153358",
@@ -144,7 +145,8 @@ const DEMO: Record<string, User> = {
     avatarUrl: "/tirthankar.jpeg",
     accentHex: "#C73E3A",
     bio: "RFID professional with over 20 years experience in Business Development, sales, consulting and Market Development. Leading RFID Intelligent Labels division for South Asia & Sub Saharan Africa at Avery Dennison, enabling brands with digital transformation solutions.",
-    officeAddress: "",
+    officeAddress:
+      "Plot No. 18/23, Peenya Industrial Area, Phase-1, Bengaluru, Karnataka - 560058",
     instagram: "tari031982",
   },
 };
