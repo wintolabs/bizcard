@@ -125,6 +125,28 @@ const DEMO: Record<string, User> = {
     officeAddress: "3, Ansari Market, Daryaganj, New Delhi -110002",
     instagram: "sgc.shubhamgraphics",
   },
+
+  tirthankar: {
+    id: "u_tirthankar",
+    handle: "tirthankar",
+    name: "Tirthankar Kshetrimayum",
+    title: "Technical Marketing Lead RFID - South Asia & Middle East",
+    department: "RFID",
+    company: "Avery Dennison",
+    companyLogo: "/avery-dennison.svg",
+    location: "India",
+    phone: "",
+    mobile: "",
+    whatsapp: "",
+    email: "",
+    website: "https://www.averydennison.com",
+    linkedIn: "https://www.linkedin.com/in/tirthankar-kshetrimayum-aa368616",
+    avatarUrl: "/tirthankar.jpeg",
+    accentHex: "#C73E3A",
+    bio: "RFID professional with over 20 years experience in Business Development, sales, consulting and Market Development. Leading RFID Intelligent Labels division for South Asia & Sub Saharan Africa at Avery Dennison, enabling brands with digital transformation solutions.",
+    officeAddress: "",
+    instagram: "tari031982",
+  },
 };
 
 export async function getUserByHandle(handle: string) {
